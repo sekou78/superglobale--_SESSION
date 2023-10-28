@@ -11,8 +11,8 @@
 <body>
   <pre>
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-      <label for="usermane">Nom d'utilisateur</label>
-      <input type="text" name="usermane" id="usermane">
+      <label for="username">Nom d'utilisateur</label>
+      <input type="text" name="username" id="username">
       <label for="password">Mot de passe</label>
       <input type="password" name="password" id="password"><br>
       <input type="submit" value="Se connecter">
@@ -33,8 +33,8 @@
       //Creation du cookie admin
       setcookie('user', 'admin', time() + 3600, '/');
       //redirection
-      // header("location:home.php");
-      echo "Bienvenue à toi, $username";
+      header("location:home.php");
+      // echo "Bienvenue à toi, $username";
     } 
     
     if ($username === 'user' AND $password === 'user') {
@@ -44,8 +44,8 @@
       //Creation du cookie admin
       setcookie('user', 'user', time() + 3600, '/');
       //redirection
-      // header("location:home.php");
-      echo "Bienvenue toi, $username";
+      header("location:home.php");
+      // echo "Bienvenue toi, $username";
     }
   }}
 ?>
